@@ -100,16 +100,16 @@ const BannerOne = ({
 
 const BannerTwo = ({ imgUrl1, title, subtitle, LinkButton1, button1 }) => {
   return (
-    <div className="home-banner3-container">
+    <Link to={LinkButton1} className="home-banner3-container">
       <div className="home-banner3-container__image">
         <img src={imgUrl1} alt="" />
         <div className="overlay"></div>
       </div>
-      <div className="home-banner3-container__infos">
+      {/* <div className="home-banner3-container__infos">
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
-      </div>
-      <div className="home-banner3-container__buttons">
+      </div> */}
+      {/* <div className="home-banner3-container__buttons">
         <div className="home-banner3-container__buttons__circles">
           <div className="home-banner3-container__buttons__circles__circles2">
             <div className="home-banner3-container__buttons__circles__circles2__circles3">
@@ -117,8 +117,8 @@ const BannerTwo = ({ imgUrl1, title, subtitle, LinkButton1, button1 }) => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div> */}
+    </Link>
   );
 };
 

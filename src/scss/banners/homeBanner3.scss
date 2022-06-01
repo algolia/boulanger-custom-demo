@@ -5,7 +5,7 @@
 .home-banner3-container {
   position: relative;
   &__image {
-    height: 30vh;
+    height: 35vh;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -15,17 +15,17 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-        60deg,
-        rgba(32, 125, 239, 0.3) 0%,
-        rgba(98, 162, 240, 0.7) 100%
-      );
+      // background: linear-gradient(
+      //   60deg,
+      //   rgba(32, 125, 239, 0.3) 0%,
+      //   rgba(98, 162, 240, 0.7) 100%
+      // );
       z-index: 10;
     }
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: fill;
       object-position: center 90%;
     }
   }
