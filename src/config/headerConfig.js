@@ -4,7 +4,7 @@
 import { atom } from 'recoil';
 
 // This const defines the logo shown on the header
-export const logoUrl = 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Logo-algolia-nebula-blue-withspaces%402x.png';
+export const logoUrl = 'https://www.boulanger.com/etc.clientlibs/aem-site-desktop/wpk.app/resources/assets/svg/logo-boulanger-full.svg';
 
 // ------------------------------------------
 // This const defines the navigation aspect of the header

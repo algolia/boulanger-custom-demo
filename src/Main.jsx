@@ -42,6 +42,8 @@ import CustomAppliedRules from './components/appliedRules/AppliedRules';
 // Custom hook to prevent body from scrolling
 import usePreventScrolling from './hooks/usePreventScrolling';
 
+import HeaderTop from '@/assets/HeaderTop.png';
+
 export const Main = ({ isLoaded }) => {
   const index = useRecoilValue(mainIndex);
   const [isMounted, setIsMounted] = useState(false);
@@ -65,6 +67,7 @@ export const Main = ({ isLoaded }) => {
     <InstantSearch searchClient={searchClient} indexName={index}>
       <CustomStateResults />
       <div className={`${isLoaded ? 'visible' : 'hidden'}`}>
+        <img src={HeaderTop} alt="" />
         <Header />
         <DemoGuideOpener />
         <AnimatePresence>
