@@ -4,41 +4,44 @@
 // Big image and 2 little images
 .home-banner3-container {
   position: relative;
- &__image{
-   height: 50vh;
-   width: 100%;
-   position: relative;
-   z-index: 1;
-  .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
+  &__image {
+    height: 30vh;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(60deg, rgba(32,125,239,0.3) 0%, rgba(98,162,240,0.7) 100%);
-    z-index: 10;
+    position: relative;
+    z-index: 1;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        60deg,
+        rgba(32, 125, 239, 0.3) 0%,
+        rgba(98, 162, 240, 0.7) 100%
+      );
+      z-index: 10;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 90%;
+    }
   }
-   img{
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     object-position: center 90%;
-   }
- }
   &__infos {
     position: absolute;
     z-index: 20;
     left: 2rem;
-    top: 2rem;
+    top: 22rem;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    
+
     h1 {
       color: $white-color;
       font-weight: 800;
       font-size: 4rem;
-    
     }
     h2 {
       color: $white-color;
@@ -50,8 +53,8 @@
   &__buttons {
     position: absolute;
     z-index: 20;
-    top: 50%;
-    left: 50%;
+    top: 82%;
+    left: 93%;
     transform: translate(-50%, -50%);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
@@ -62,7 +65,7 @@
       width: 150px;
       height: 150px;
       transition: all 0.2s ease-in-out;
-      &:hover{
+      &:hover {
         border: 1px solid rgba($color: $white-color, $alpha: 1);
         transition: all 0.2s ease-in-out;
       }
@@ -91,16 +94,15 @@
             color: $white-color;
             transition: all 0.2s ease-in-out;
           }
-         
         }
       }
     }
-      :hover {
-      div{
-          border: 1px solid rgba($color: $white-color, $alpha: 1);
-          transition: all 0.2s ease-in-out;
-        }
-        a{
+    :hover {
+      div {
+        border: 1px solid rgba($color: $white-color, $alpha: 1);
+        transition: all 0.2s ease-in-out;
+      }
+      a {
         transform: scale(0.9);
         transition: all 0.2s ease-in-out;
       }
