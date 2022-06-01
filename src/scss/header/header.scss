@@ -106,6 +106,7 @@
               transform-origin: center center;
               transform: scaleX(0);
               transition: transform 0.4s;
+              left: 0;
             }
             &:hover::before {
               transition: 0.2 ease-in-out;

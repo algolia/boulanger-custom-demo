@@ -4,9 +4,10 @@ $red-color: rgb(181, 31, 41);
 $grey-dark-color: rgb(102, 102, 102);
 $grey-light-color: rgb(221, 221, 221);
 $white-color: rgb(255, 255, 255);
-$blue-algolia: rgb(32,125,239);
+$blue-algolia: rgb(32, 125, 239);
+$orange-boulanger: rgb(209, 70, 0);
 
-$orange-color: rgb(216, 123, 51);
+$orange-color: rgb(209, 70, 0);
 
 // Background Color:
 $background-color: rgb(249, 249, 249);
@@ -149,11 +150,21 @@ $blue-algolia-10-gradient: (
   background: linear-gradient(93.93deg, $blue-algolia -40.44%, #ffffff 85.65%),
 );
 
-$blue-algolia-custom-gradient: linear-gradient(60deg, rgba(32,125,239,1) 0%, rgba(98,162,240,1) 100%);
-$blue-algolia-custom-reverse-gradient: linear-gradient(99deg, rgba(84,104,255,0.3) 31%, rgba(255,255,255,1) 100%);
-$blue-algolia-custom-reverse-gradient-30: linear-gradient(99deg, rgba(84,104,255,0.3) 31%, rgba(255,255,255,0.3) 100%);
-
-
+$blue-algolia-custom-gradient: linear-gradient(
+  60deg,
+  rgba(32, 125, 239, 1) 0%,
+  rgba(98, 162, 240, 1) 100%
+);
+$blue-algolia-custom-reverse-gradient: linear-gradient(
+  99deg,
+  rgba(84, 104, 255, 0.3) 31%,
+  rgba(255, 255, 255, 1) 100%
+);
+$blue-algolia-custom-reverse-gradient-30: linear-gradient(
+  99deg,
+  rgba(84, 104, 255, 0.3) 31%,
+  rgba(255, 255, 255, 0.3) 100%
+);
 
 // ------------------------------------------
 // Spaces

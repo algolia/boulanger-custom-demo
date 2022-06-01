@@ -4,7 +4,8 @@
 import { atom } from 'recoil';
 
 // This const defines the logo shown on the header
-export const logoUrl = 'https://www.boulanger.com/etc.clientlibs/aem-site-desktop/wpk.app/resources/assets/svg/logo-boulanger-full.svg';
+export const logoUrl =
+  'https://www.boulanger.com/etc.clientlibs/aem-site-desktop/wpk.app/resources/assets/svg/logo-boulanger-full.svg';
 
 // ------------------------------------------
 // This const defines the navigation aspect of the header
@@ -18,72 +19,60 @@ export const linksHeader = atom({
   key: 'linksHeader', // unique ID (with respect to other atoms/selectors)
   default: [
     {
-      name: 'Gros électroménager',
+      name: 'Loisirs à la maison',
       type: 'filter',
-      filter: '',
-      url: '/search',
+      filter: 'Loisirs à la maison',
+      url: '/loisirsalamaison',
     },
     {
-      name: 'Cuisine cuisson',
+      name: 'Confort à la maison',
       type: 'filter',
-      filter: 'Mens',
-      url: '/mens',
+      filter: 'Confort à la maison',
+      url: '/confortalamaison',
     },
     {
-      name: 'Maison Entretien',
+      name: 'Les activités Nomades',
       type: 'filter',
-      filter: 'Womens',
-      url: '/womens',
+      filter: 'Les activités Nomades',
+      url: '/lesactivitesnomades',
     },
     {
-      name: 'Beauté Santé',
+      name: 'Accessoires et consommables',
       type: 'filter',
-      filter: 'Womens',
-      url: '/womens',
+      filter: 'Accessoires et consommables',
+      url: '/accessoiresetconsommables',
     },
     {
-      name: 'Objets connectés',
+      name: 'Maison & Objets connectés',
       type: 'filter',
-      filter: 'Womens',
-      url: '/womens',
+      filter: 'Maison & Objets connectés',
+      url: '/maison&objetsconnectes',
     },
     {
-      name: 'Smartphone Téléphonie',
+      name: 'Service',
       type: 'filter',
-      filter: 'Womens',
-      url: '/womens',
-    },
-    {
-      name: 'Informatique Tablette',
-      type: 'filter',
-      filter: 'Womens',
-      url: '/womens',
-    },
-    {
-      name: 'Image Son',
-      type: 'filter',
-      filter: 'Womens',
-      url: '/womens',
+      filter: 'Service',
+      url: '/service',
     },
     // This uses context from the Algolia dashboard, configured using Visual Editor
-    {
-      name: 'Accessories',
-      type: 'context',
-      context: 'accessories',
-      url: '/accessories',
-    },
+    // {
+    //   name: 'Accessories',
+    //   type: 'context',
+    //   context: 'accessories',
+    //   url: '/accessories',
+    // },
   ],
 });
 
 export const selectorNavigationRef = atom({
   key: 'selectorNavigationRef', // unique ID (with respect to other atoms/selectors)
   default: '',
-})
+});
 
 export const categorySelectionAtom = atom({
   key: 'categorySelectionAtom',
-  default: null
-})
+  default: null,
+});
 
 // This is the state of the 'state' from SearchInCategory.jsx
 // It is used to persist the category underline on refresh
