@@ -178,7 +178,7 @@ export const styles = {
     cursor: 'pointer',
   }),
   placeholder: () => ({
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Maven Pro', sans-serif",
     cursor: 'pointer',
   }),
   valueContainer: () => ({
@@ -187,7 +187,7 @@ export const styles = {
   option: () => {
     return {
       textTransform: 'capitalize',
-      fontFamily: "'Poppins', sans-serif",
+      fontFamily: "'Maven Pro', sans-serif",
       padding: '0.5rem',
       cursor: 'pointer',
       borderRadius: '0.3rem',
@@ -199,7 +199,7 @@ export const styles = {
     };
   },
   singleValue: () => ({
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Maven Pro', sans-serif",
     textTransform: 'capitalize',
     cursor: 'pointer',
     fontSize: '1rem',
