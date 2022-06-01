@@ -60,7 +60,7 @@
       padding: 2rem;
       // gap: 1rem;
       .brand {
-        color: $grey-dark-color;
+        color: $orange-boulanger;
         font-weight: bold;
         font-size: 1.2rem;
         text-transform: capitalize;
@@ -107,18 +107,18 @@
       }
     }
   }
-  .addToCartBtn{
+  .addToCartBtn {
     @include btn($blue-algolia-custom-gradient, $white-color, transparent);
     gap: 1rem;
-   
-    &:hover{
+
+    &:hover {
       @include btn-hover($blue-algolia-custom-gradient, $white-color);
       gap: 1.5rem;
     }
-    svg{
+    svg {
       width: 12px;
     }
-    p{
+    p {
       color: $white-color;
     }
   }

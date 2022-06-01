@@ -26,7 +26,7 @@ const SearchInCategory = ({ state }) => {
     return (
       <div className="searchbox__category">
         <p>
-          Search in{' '}
+          Recherche dans{' '}
           {state.action
             .split(':')[1]
             .split('>')
@@ -51,7 +51,7 @@ const SearchInCategory = ({ state }) => {
   } else if (state?.type === 'context') {
     return (
       <div className="searchbox__category">
-        <p> Search in {state.action}</p>
+        <p> Recherche dans {state.action}</p>
         <span
           onClick={() => {
             navigate('/search');

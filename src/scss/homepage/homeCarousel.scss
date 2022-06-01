@@ -14,7 +14,7 @@
     cursor: grab;
     overflow: scroll;
 
-    &__imageWrapper{
+    &__imageWrapper {
       max-width: 60%;
       display: flex;
       justify-content: center;
@@ -33,31 +33,29 @@
         min-width: 30%;
         padding: 1rem;
         position: relative;
-      
 
-        &__infos{   
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
-        height: 6rem;
-        .name {
-          color: $main-color;
-          font-size: 0.8rem;
-          text-align: center;
-          margin-top: 1rem;
-          text-transform: capitalize;
-        }
-        .price {
-          color: $blue-algolia;
-          font-size: 1.2rem;
-          font-weight: 600;   
+        &__infos {
+          display: flex;
+          position: relative;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          height: 6rem;
+          .name {
+            color: $main-color;
+            font-size: 0.8rem;
+            text-align: center;
+            margin-top: 1rem;
+            text-transform: capitalize;
+          }
+          .price {
+            color: $blue-algolia;
+            font-size: 1.2rem;
+            font-weight: 600;
+          }
         }
       }
-      }
-
     }
   }
 }
@@ -65,10 +63,9 @@
   display: none; /* Safari and Chrome */
 }
 
-
 // MOBILE & TABLET
 
-.home-carousel-mobile{
+.home-carousel-mobile {
   margin: 2rem 1rem;
   h3 {
     color: $blue-algolia;
@@ -79,7 +76,7 @@
     cursor: grab;
     overflow: scroll;
 
-    &__imageWrapper{
+    &__imageWrapper {
       max-width: 100%;
       img {
         width: 100%;
@@ -94,31 +91,33 @@
         min-width: 30%;
         padding: 1rem;
         position: relative;
-      
 
-        &__infos{   
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
-        height: 8rem;
-        .name {
-          color: $main-color;
-          font-size: 0.8rem;
-          text-align: center;
-          margin-top: 1rem;
-          text-transform: capitalize;
-        }
-        .price {
-          color: $blue-algolia;
-          font-size: 1.2rem;
-          font-weight: 600;   
+        &__infos {
+          display: flex;
+          position: relative;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          height: 8rem;
+          .name {
+            color: $main-color;
+            font-size: 0.8rem;
+            text-align: center;
+            margin-top: 1rem;
+            text-transform: capitalize;
+          }
+          .price {
+            color: $blue-algolia;
+            font-size: 1.2rem;
+            font-weight: 600;
+          }
         }
       }
-      }
-
     }
   }
+}
+
+.blur {
+  filter: blur(3px);
 }

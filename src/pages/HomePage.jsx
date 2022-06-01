@@ -95,9 +95,21 @@ const HomePage = ({ setIsMounted }) => {
           </Suspense>
         ))}
 
-      {homepage_1 ? <img src={homepage_1} alt="" /> : null}
+      {homepage_1 ? (
+        <img
+          className={`${isFederatedOpen ? 'blur' : ''}`}
+          src={homepage_1}
+          alt=""
+        />
+      ) : null}
 
-      {homepage_2 && <img src={homepage_2} alt="" />}
+      {homepage_2 && (
+        <img
+          className={`${isFederatedOpen ? 'blur' : ''}`}
+          src={homepage_2}
+          alt=""
+        />
+      )}
     </motion.div>
   );
 };
