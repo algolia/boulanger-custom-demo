@@ -28,6 +28,8 @@ import Navigation from './Navigation';
 
 import { rulesAtom } from '@/config/appliedRulesConfig';
 
+import Logos from '@/assets/Logos.png';
+
 const HeaderLaptop = () => {
   // React Tour
   const { setIsOpen } = useTour();
@@ -77,7 +79,7 @@ const HeaderLaptop = () => {
           {displayVoiceSearch && <CustomVoiceSearchComponent />}
         </div>
         <div className="container__header-top__title">
-          <h1>Demo BoilerPlate</h1>
+          <img src={Logos} alt="" />
         </div>
       </div>
       <div className="container__header-nav">
