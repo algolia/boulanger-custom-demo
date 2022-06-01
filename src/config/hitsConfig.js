@@ -12,10 +12,13 @@ import { atom } from 'recoil';
 // ------------------------------------------
 export const hitsConfig = {
   objectID: 'objectID',
-  productName: 'name',
+  productName: 'label',
   brand: 'brand',
   category: 'category',
+  condition: 'condition',
   reviewScore: 'reviewScore',
+  merchant: 'merchant',
+  description: 'description',
   reviewCount: 'reviewCount',
   categories: 'categories',
   colour: 'colour',
@@ -23,7 +26,7 @@ export const hitsConfig = {
   hierarchicalCategories: 'hierarchicalCategories',
   sizeFilter: 'sizeFilter',
   price: 'price',
-  image: 'img_optimised',
+  image: 'image',
   imageAlt: 'imageAlt',
   hierarchicalCategoriesLvl0: 'hierarchicalCategories.lvl0',
   hierarchicalCategoriesLvl1: 'hierarchicalCategories.lvl1',

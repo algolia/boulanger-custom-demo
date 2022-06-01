@@ -6,11 +6,10 @@ import { atom, selector } from 'recoil';
 import algoliasearch from 'algoliasearch';
 import aa from 'search-insights';
 
-
 // This export represents the information needed for the Algolia API client
 export const searchClientCreds = {
-  APIKey: 'b5fcdde4a6fd2c831a2706fec93c48b7',
-  appID: '853MYZ81KY',
+  APIKey: 'e740caae53c72e09463a1117854491d5',
+  appID: 'RSBCBF0EG8',
 };
 
 // This export is a single instance Algolia API client
@@ -22,7 +21,7 @@ export const searchClient = algoliasearch(
 // Please ignore this atom - DO NOT TOUCH
 export const mainIndex = atom({
   key: 'mainIndex', // unique ID (with respect to other atoms/selectors)
-  default: 'flagship_fashion', // default value (aka initial value)
+  default: 'blngr_demo_products_transformed', // default value (aka initial value)
 });
 
 // Initialise insights client
@@ -33,8 +32,6 @@ aa('init', {
 
 // Export an active insights client
 export const insightsClient = aa;
-
-
 
 // DO NOT REMOVE ANYTHING, ONLY RENAME VALUES IF NEEDED
 // IF YOU DON'T WANT IT USED, USE FEATURE CONFIG TO TURN OFF
