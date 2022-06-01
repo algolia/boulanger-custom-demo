@@ -18,19 +18,49 @@ export const linksHeader = atom({
   key: 'linksHeader', // unique ID (with respect to other atoms/selectors)
   default: [
     {
-      name: 'All',
+      name: 'Gros électroménager',
       type: 'filter',
       filter: '',
       url: '/search',
     },
     {
-      name: 'Mens',
+      name: 'Cuisine et cuisson',
       type: 'filter',
       filter: 'Mens',
       url: '/mens',
     },
     {
-      name: 'Womens',
+      name: 'Maison - Entretien',
+      type: 'filter',
+      filter: 'Womens',
+      url: '/womens',
+    },
+    {
+      name: 'Beauté - Santé',
+      type: 'filter',
+      filter: 'Womens',
+      url: '/womens',
+    },
+    {
+      name: 'Objets connectés',
+      type: 'filter',
+      filter: 'Womens',
+      url: '/womens',
+    },
+    {
+      name: 'Smartphone - Téléphonie',
+      type: 'filter',
+      filter: 'Womens',
+      url: '/womens',
+    },
+    {
+      name: 'Informatique - Tablette',
+      type: 'filter',
+      filter: 'Womens',
+      url: '/womens',
+    },
+    {
+      name: 'Image - Son',
       type: 'filter',
       filter: 'Womens',
       url: '/womens',
