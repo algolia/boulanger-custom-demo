@@ -31,7 +31,6 @@ import Badge from './Badge';
 //Import hook for store ID into local storage
 import useStoreIdToLocalStorage from '@/hooks/useStoreObjectIdToLocalStorage';
 
-
 // import Price component
 import Price from '@/components/price/price.jsx';
 
@@ -41,7 +40,15 @@ const Hit = ({ hit, setSrpIsLoaded }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   // Get hit attribute from config file
-  const { objectID, image, imageAlt, category, productName } = hitsConfig;
+  const {
+    objectID,
+    image,
+    imageAlt,
+    category,
+    productName,
+    hierarchicalCategoriesLvl0,
+    details,
+  } = hitsConfig;
 
   const [shouldShowRankingInfo, setShouldShowRankingInfo] = useState(false);
   useEffect(() => {
@@ -145,6 +152,7 @@ const Hit = ({ hit, setSrpIsLoaded }) => {
           <h3>
             <Highlight hit={hit} attribute={productName} />
           </h3>
+          {detailHits(get(hit, hierarchicalCategoriesLvl0), get(hit, details))}
           <div className="srpItem__infos__down">
             <p className="price">
               <Price hit={hit} />
@@ -157,3 +165,37 @@ const Hit = ({ hit, setSrpIsLoaded }) => {
 };
 
 export { Hit };
+
+const detailHits = (categ, details) => {
+  switch (categ) {
+    case 'Confort à la maison':
+      return (
+        <div className="details-srp">
+          {/* <ul>{categ}</ul> */}
+          <ul>
+            {/* {details.map((d) => {
+              if (d['Niveau sonore']) {
+                console.log(d['Niveau sonore']);
+                return d['Niveau sonore'];
+              }
+              return '';
+            })} */}
+            {filterArray(details)}
+          </ul>
+        </div>
+      );
+    default:
+      return (
+        <div>
+          <h1>NO</h1>
+        </div>
+      );
+  }
+};
+
+const filterArray = (d) => {
+  const newArray = d.filter((obj) => obj.hasOwnProperty('Niveau sonore'));
+  if (newArray[1]) {
+    return newArray[1]['Niveau sonore'];
+  }
+};

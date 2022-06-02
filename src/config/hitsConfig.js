@@ -21,6 +21,7 @@ export const hitsConfig = {
   description: 'description',
   reviewCount: 'reviewCount',
   categories: 'categories',
+  details: 'properties',
   colour: 'properties.Coloris',
   madeIn: 'properties.Fabriqué en',
   genderFilter: 'genderFilter',
