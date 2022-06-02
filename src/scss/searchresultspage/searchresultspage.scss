@@ -7,7 +7,7 @@
 // ------------------------------------------
 // Container
 // ------------------------------------------
-.srp{
+.srp {
   position: relative;
 }
 .srp-container {
@@ -113,24 +113,23 @@
   }
 }
 
-.srp-hidden{
+.srp-hidden {
   opacity: 0;
   visibility: hidden;
 }
 
-.srp-active{
+.srp-active {
   opacity: 0;
   animation: fadeIn 3s forwards cubic-bezier(0.43, 0.13, 0.23, 0.96);
 }
 
 @keyframes fadeIn {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
-  
 }
 
 // ------------------------------------------
@@ -195,4 +194,19 @@
 // ------------------------------------------
 .search-box-invisible {
   display: none;
+}
+
+.detail-price{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .details-srp {
+    // display: grid;
+    // grid-template-rows: auto;
+    // grid-template-columns: 1fr;
+    li{
+      margin-bottom: 0.2rem;
+      font-size: 0.8rem;
+    }
+  }
 }

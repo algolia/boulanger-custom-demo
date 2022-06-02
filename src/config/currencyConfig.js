@@ -12,7 +12,7 @@ import { atom } from 'recoil';
 // If no need for currency symbol please leave an empty string
 export const currencySymbolAtom = atom({
   key: 'currencySymbolAtom', // unique ID (with respect to other atoms/selectors)
-  default: '£', // default value (aka initial value)
+  default: '€', // default value (aka initial value)
 });
 
 // ------------------------------------------
@@ -21,5 +21,5 @@ export const currencySymbolAtom = atom({
 // ------------------------------------------
 export const shouldDisplayCurrency = atom({
   key: 'shouldDisplayCurrency',
-  default: false,
+  default: true,
 });

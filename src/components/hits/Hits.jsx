@@ -152,11 +152,16 @@ const Hit = ({ hit, setSrpIsLoaded }) => {
           <h3>
             <Highlight hit={hit} attribute={productName} />
           </h3>
-          {detailHits(get(hit, hierarchicalCategoriesLvl0), get(hit, details))}
-          <div className="srpItem__infos__down">
-            <p className="price">
-              <Price hit={hit} />
-            </p>
+          <div className="detail-price">
+            {detailHits(
+              get(hit, hierarchicalCategoriesLvl0),
+              get(hit, details)
+            )}
+            <div className="srpItem__infos__down">
+              <p className="price">
+                <Price hit={hit} />
+              </p>
+            </div>
           </div>
         </div>
       </>
@@ -170,19 +175,34 @@ const detailHits = (categ, details) => {
   switch (categ) {
     case 'Confort à la maison':
       return (
-        <div className="details-srp">
-          {/* <ul>{categ}</ul> */}
-          <ul>
-            {/* {details.map((d) => {
-              if (d['Niveau sonore']) {
-                console.log(d['Niveau sonore']);
-                return d['Niveau sonore'];
-              }
-              return '';
-            })} */}
-            {filterArray(details)}
-          </ul>
-        </div>
+        <ul className="details-srp">
+          <li>{filterArrayForSonore(details)}</li>
+          {details.map((d) => {
+            if (d['Poids net']) {
+              return (
+                <>
+                  <li> Poids: {d['Poids net']} Kg </li>
+                </>
+              );
+            }
+            if (
+              d['Largeur produit (cm)'] !== undefined &&
+              d['Hauteur produit (cm)'] !== undefined &&
+              d['Profondeur produit (cm)'] !== undefined
+            ) {
+              console.log('Here');
+              return (
+                <>
+                  <li>
+                    LxHxP: {d['Largeur produit (cm)']} X
+                    {d['Hauteur produit(cm)']} X {d['Profondeur produit (cm)']}
+                  </li>
+                </>
+              );
+            }
+          })}
+          <li>{filterArrayForEnergy(details)}</li>
+        </ul>
       );
     default:
       return (
@@ -193,9 +213,23 @@ const detailHits = (categ, details) => {
   }
 };
 
-const filterArray = (d) => {
-  const newArray = d.filter((obj) => obj.hasOwnProperty('Niveau sonore'));
-  if (newArray[1]) {
-    return newArray[1]['Niveau sonore'];
+const filterArrayForSonore = (d) => {
+  const newArraySonore = d.filter((obj) => obj.hasOwnProperty('Niveau sonore'));
+  if (newArraySonore[1]) {
+    return 'Bruit:' + newArraySonore[0]['Niveau sonore'];
+  }
+};
+
+const filterArrayForEnergy = (d) => {
+  const newArrayEnergy = d.filter((obj) =>
+    obj.hasOwnProperty('Classe énergétique')
+  );
+  if (newArrayEnergy.length && newArrayEnergy[1] !== undefined) {
+    return 'Energie: ' + newArrayEnergy[1]['Classe énergétique'];
+  }
+  if (newArrayEnergy.length && newArrayEnergy[1] === undefined) {
+    return 'Energie: ' + newArrayEnergy[0]['Classe énergétique'];
+  } else {
+    return '';
   }
 };
