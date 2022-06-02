@@ -28,6 +28,7 @@ import get from 'lodash/get';
 
 // import Price component
 import Price from '@/components/price/price.jsx';
+import { EmptyStar, FullStar } from '@/assets/svg/SvgIndex';
 
 // Build the Carousel for use on the Homepage
 const HomeCarousel = ({ context, title }) => {
@@ -61,7 +62,7 @@ const Carousel = ({ hits, title }) => {
 
   // Hits are imported by Recoil
   const hitState = useSetRecoilState(hitAtom);
-  const { objectID, image, productName } = hitsConfig;
+  const { objectID, image, productName, rating, category } = hitsConfig;
 
   // Used by Framer Motion
   const carousel = useRef();
@@ -114,6 +115,8 @@ const Carousel = ({ hits, title }) => {
                     navigate(`/search/${hit[objectID]}`);
                   }}
                 >
+                  <Rating ratingInfos={get(hit, rating)} />
+                  <p className="category">{get(hit, category)}</p>
                   <p className="name">{get(hit, productName)}</p>
                   <p className="price">
                     <Price hit={hit} />
@@ -130,3 +133,77 @@ const Carousel = ({ hits, title }) => {
 const CustomHitsCarousel = connectHits(Carousel);
 
 export default HomeCarousel;
+
+const Rating = ({ ratingInfos }) => {
+  if (ratingInfos > 0 && ratingInfos < 1) {
+    return (
+      <div className="rating_stars">
+        <EmptyStar />
+        <EmptyStar />
+        <EmptyStar />
+        <EmptyStar />
+        <EmptyStar />
+      </div>
+    );
+  }
+  if (ratingInfos >= 1 && ratingInfos < 2) {
+    return (
+      <div className="rating_stars">
+        <FullStar />
+        <EmptyStar />
+        <EmptyStar />
+        <EmptyStar />
+        <EmptyStar />
+      </div>
+    );
+  }
+  if (ratingInfos >= 2 && ratingInfos < 3) {
+    return (
+      <div className="rating_stars">
+        <FullStar />
+        <FullStar />
+        <EmptyStar />
+        <EmptyStar />
+        <EmptyStar />
+      </div>
+    );
+  }
+  if (ratingInfos >= 3 && ratingInfos < 4) {
+    return (
+      <div className="rating_stars">
+        <FullStar />
+        <FullStar />
+        <FullStar />
+        <EmptyStar />
+        <EmptyStar />
+      </div>
+    );
+  }
+  if (ratingInfos >= 4 && ratingInfos < 5) {
+    return (
+      <div className="rating_stars">
+        <FullStar />
+        <FullStar />
+        <FullStar />
+        <FullStar />
+        <EmptyStar />
+      </div>
+    );
+  }
+  if (ratingInfos >= 5) {
+    return (
+      <div className="rating_stars">
+        <FullStar />
+        <FullStar />
+        <FullStar />
+        <FullStar />
+        <FullStar />
+      </div>
+    );
+  }
+  // return (
+  //   <div>
+  //     <h1>{ratingInfos}</h1>
+  //   </div>
+  // );
+};

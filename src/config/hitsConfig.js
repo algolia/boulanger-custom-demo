@@ -23,6 +23,7 @@ export const hitsConfig = {
   categories: 'categories',
   details: 'properties',
   colour: 'properties.Coloris',
+  rating: 'rating',
   madeIn: 'properties.Fabriqué en',
   genderFilter: 'genderFilter',
   hierarchicalCategories: 'categories',

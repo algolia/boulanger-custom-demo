@@ -22,12 +22,12 @@ export const shouldHaveLanguages = atom({
 
 export const shouldHaveSorts = atom({
   key: 'shouldHaveSorts', // unique ID (with respect to other atoms/selectors)
-  default: false, // default value (aka initial value)
+  default: true, // default value (aka initial value)
 });
 
 export const shouldHaveCarousels = atom({
   key: 'shouldHaveCarousels', // unique ID (with respect to other atoms/selectors)
-  default: false, // default value (aka initial value)
+  default: true, // default value (aka initial value)
 });
 
 export const shouldHaveVoiceSearch = atom({

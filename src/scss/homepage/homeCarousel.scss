@@ -6,16 +6,17 @@
 .home-carousel {
   margin: 2rem 4rem;
   h3 {
-    color: $blue-algolia;
+    color: $orange-boulanger;
     font-size: 2rem;
     font-weight: 800;
+    margin-bottom: 1rem;
   }
   .carousel {
     cursor: grab;
     overflow: scroll;
 
     &__imageWrapper {
-      max-width: 60%;
+      max-height: 70%;
       display: flex;
       justify-content: center;
       margin: 0 auto;
@@ -30,29 +31,44 @@
     .inner-carousel {
       display: flex;
       .item {
-        min-width: 30%;
+        border-radius: 10px;
+        min-width: 15%;
+        height: 25rem;
         padding: 1rem;
         position: relative;
+        background-color: $white-color;
+        margin-right: 2rem;
+        box-shadow: rgb(0 0 0 / 20%) 3px -2px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         &__infos {
           display: flex;
           position: relative;
           flex-direction: column;
           align-items: center;
-          justify-content: space-between;
           cursor: pointer;
+          justify-content: end;
           height: 6rem;
           .name {
             color: $main-color;
             font-size: 0.8rem;
             text-align: center;
-            margin-top: 1rem;
+            text-transform: capitalize;
+          }
+          .category {
+            color: $orange-boulanger;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
             text-transform: capitalize;
           }
           .price {
-            color: $blue-algolia;
-            font-size: 1.2rem;
-            font-weight: 600;
+            color: $text-color;
+            font-size: 1.4rem;
+            font-weight: 800;
           }
         }
       }
@@ -120,4 +136,10 @@
 
 .blur {
   filter: blur(3px);
+}
+
+.rating_stars {
+  display: flex;
+  position: absolute;
+  top: -5rem;
 }

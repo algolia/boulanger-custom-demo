@@ -9,14 +9,10 @@
 // ------------------------------------------
 export const carouselConfig = [
   {
-    context: 'homepage-carousel-one',
-    title: 'Our Bags Collection',
-  },
-  {
-    context: 'homepage-carousel-two',
-    title: 'Our Best Hoodies',
+    context: 'home_carousel_rating',
+    title: 'Nos meilleurs Articles',
   },
 ];
 
 // Indicates how many records should be shown in an individual carousel
-export const hitsPerCarousel = 8;
+export const hitsPerCarousel = 10;
