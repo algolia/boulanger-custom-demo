@@ -39,7 +39,7 @@
   display: flex;
   justify-content: space-between;
   .stats-infos {
-    @include stats($blue-algolia);
+    @include stats($orange-boulanger);
   }
   select {
     font-size: 0.9rem;

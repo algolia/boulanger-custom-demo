@@ -11,7 +11,7 @@ export const refinements = [
   {
     type: 'hierarchical',
     header: 'Categories',
-    label: 'Category',
+    label: 'Catégorie',
     options: {
       attribute: [
         hitsConfig.hierarchicalCategoriesLvl0,
@@ -32,10 +32,29 @@ export const refinements = [
   },
   {
     type: 'list',
-    header: 'Brand',
-    label: 'Brand',
+    header: 'Marque',
+    label: 'Marque',
     options: {
       attribute: hitsConfig.brand,
+      searchable: true,
+      limit: 6,
+    },
+  },
+  {
+    type: 'list',
+    header: 'Condition',
+    label: 'Condition',
+    options: {
+      attribute: hitsConfig.condition,
+    },
+  },
+  {
+    type: 'list',
+    header: 'Fabriqué em',
+    label: 'Fabriqué en',
+    options: {
+      attribute: hitsConfig.madeIn,
+      limit: 8,
       searchable: true,
     },
   },

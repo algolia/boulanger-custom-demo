@@ -28,7 +28,7 @@
       margin-bottom: 1rem;
       p {
         font-family: $main-font;
-        color: $blue-algolia;
+        color: $orange-boulanger;
         font-weight: 600;
       }
     }
@@ -61,7 +61,7 @@
           $white-color,
           $main-color,
           $main-color,
-          $blue-algolia
+          $orange-boulanger
         );
         > p{
           font-weight: 300;
@@ -73,7 +73,7 @@
           right: 0;
           bottom: 0;
           left: 0;
-          background: $blue-algolia;
+          background: $orange-boulanger;
           z-index: -1;
           transition: opacity 0.3s ease-in-out;
           opacity: 0;
@@ -95,7 +95,7 @@
     
   }
   .refined-filter {
-    @include btn-hover($blue-algolia, $white-color);
+    @include btn-hover($orange-boulanger, $white-color);
     p,
     span {
       color: $white-color;
@@ -103,7 +103,7 @@
   }
   // Personalisation Slider price
   .rc-slider {
-    @include priceSlider($blue-algolia);
+    @include priceSlider($orange-boulanger);
   }
 }
 .filters-container-hierarchical {
@@ -141,13 +141,13 @@
           $white-color,
           $main-color,
           $main-color,
-          $blue-algolia
+          $orange-boulanger
         );
         > p{
           font-weight: 300;
         }
         &:hover {
-          @include facetsHierarchicalHover($blue-algolia);
+          @include facetsHierarchicalHover($orange-boulanger);
         }
       }
       :hover > p {
@@ -164,13 +164,13 @@
           width: 97%;
         }
         &:hover > button {
-          @include facetsHierarchicalHover($blue-algolia);
+          @include facetsHierarchicalHover($orange-boulanger);
         }
       }
     }
   }
   .refined-filter {
-    @include btn-hover($blue-algolia, $white-color);
+    @include btn-hover($orange-boulanger, $white-color);
     p,
     span {
       color: $white-color;
