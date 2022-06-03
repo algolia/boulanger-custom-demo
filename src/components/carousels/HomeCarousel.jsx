@@ -116,7 +116,7 @@ const Carousel = ({ hits, title }) => {
                   }}
                 >
                   <Rating ratingInfos={get(hit, rating)} />
-                  {sale && (
+                  {get(hit, sale) && (
                     <div className="promo-item">
                       <p>Promotion</p>
                     </div>

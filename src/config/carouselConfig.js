@@ -12,6 +12,10 @@ export const carouselConfig = [
     context: 'home_carousel_rating',
     title: 'Nos meilleurs Articles',
   },
+  {
+    context: 'home_carousel_promo',
+    title: 'Nos promotions',
+  },
 ];
 
 // Indicates how many records should be shown in an individual carousel
