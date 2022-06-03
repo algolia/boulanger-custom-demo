@@ -37,7 +37,7 @@ export const hitsConfig = {
   hierarchicalCategoriesLvl3: 'categories.lvl3',
   hierarchicalCategoriesLvl4: 'categories.lvl4',
   hierarchicalCategoriesLvl5: 'categories.lvl5',
-  colourHexa: 'colour_hexa_v6',
+  colourHexa: 'colour_hexa',
 };
 
 // ------------------------------------------

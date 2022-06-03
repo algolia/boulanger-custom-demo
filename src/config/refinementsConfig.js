@@ -60,8 +60,8 @@ export const refinements = [
   },
   {
     type: 'colour',
-    header: 'Colour',
-    label: 'Colour',
+    header: 'Couleur',
+    label: 'Couleur',
     options: {
       attribute: hitsConfig.colourHexa,
     },
