@@ -62,7 +62,7 @@ const Carousel = ({ hits, title }) => {
 
   // Hits are imported by Recoil
   const hitState = useSetRecoilState(hitAtom);
-  const { objectID, image, productName, rating, category } = hitsConfig;
+  const { objectID, image, productName, rating, category, sale } = hitsConfig;
 
   // Used by Framer Motion
   const carousel = useRef();
@@ -116,6 +116,11 @@ const Carousel = ({ hits, title }) => {
                   }}
                 >
                   <Rating ratingInfos={get(hit, rating)} />
+                  {sale && (
+                    <div className="promo-item">
+                      <p>Promotion</p>
+                    </div>
+                  )}
                   <p className="category">{get(hit, category)}</p>
                   <p className="name">{get(hit, productName)}</p>
                   <p className="price">

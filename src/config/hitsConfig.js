@@ -29,6 +29,7 @@ export const hitsConfig = {
   hierarchicalCategories: 'categories',
   sizeFilter: 'sizeFilter',
   price: 'price',
+  sale: 'onSale',
   image: 'image',
   imageAlt: 'imageAlt',
   hierarchicalCategoriesLvl0: 'categories.lvl0',

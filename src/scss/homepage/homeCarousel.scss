@@ -70,6 +70,18 @@
             font-size: 1.4rem;
             font-weight: 800;
           }
+          .promo-item {
+            background-color: $orange-boulanger;
+            padding: 0.5rem;
+            position: absolute;
+            top: -3rem;
+            border-radius: 5px;
+            right: 0;
+            p {
+              color: $white-color;
+              font-weight: 500;
+            }
+          }
         }
       }
     }
@@ -142,7 +154,7 @@
   display: flex;
   position: absolute;
   top: -5rem;
-  svg{
+  svg {
     width: 22px;
   }
 }
