@@ -116,18 +116,35 @@ const CurrentRefinements = ({ items, refine, createURL }) => {
 const CurrentRefinementGeneral = ({ item, colourHexa }) => {
   return (
     <ul className="refinement-container__refinementsInner">
-      {item.items.map((nested) => (
-        <li key={nested.label}>
-          <a
-            onClick={(event) => {
-              event.preventDefault();
-              refine(nested.value);
-            }}
-          >
-            {colourHexa ? displayColor(nested.label) : nested.label}
-          </a>
-        </li>
-      ))}
+      {item.items.map((nested) => {
+        if (nested.label !== 'true') {
+          return (
+            <li key={nested.label}>
+              <a
+                onClick={(event) => {
+                  event.preventDefault();
+                  refine(nested.value);
+                }}
+              >
+                {colourHexa ? displayColor(nested.label) : nested.label}
+              </a>
+            </li>
+          );
+        } else {
+          return (
+            <li key={nested.label}>
+              <a
+                onClick={(event) => {
+                  event.preventDefault();
+                  refine(nested.value);
+                }}
+              >
+                En Promotion
+              </a>
+            </li>
+          );
+        }
+      })}
     </ul>
   );
 };
