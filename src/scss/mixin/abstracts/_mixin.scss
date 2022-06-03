@@ -237,6 +237,16 @@
         font-size: 1rem;
       }
     }
+    .promotion-item {
+      background-color: $orange-boulanger;
+      padding: 0.5rem;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      p {
+        color: $white-color;
+      }
+    }
   }
 }
 

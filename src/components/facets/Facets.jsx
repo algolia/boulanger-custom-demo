@@ -20,7 +20,14 @@ import CustomHierarchicalMenu from './Hierarchical';
 import { refinements } from '@/config/refinementsConfig';
 
 // expects an attribute which is an array of items
-const RefinementList = ({ title, items, refine, searchForItems, options }) => {
+const RefinementList = ({
+  title,
+  items,
+  refine,
+  searchForItems,
+  options,
+  type,
+}) => {
   const [showFacet, setShowFacet] = useState(false);
   const [searchInput, setSearchInput] = useState(false);
   return (
@@ -69,9 +76,9 @@ const RefinementList = ({ title, items, refine, searchForItems, options }) => {
                 refine(item.value);
               }}
             >
-              <p>{item.label}</p>
+              <p>{Label(item.label, type)}</p>
               <span className="filters-container__content__list__refinement-count">
-                {item.count}
+                {Count(item.label, item.count, type)}
               </span>
             </button>
           </li>
@@ -148,6 +155,7 @@ const Facets = () => {
                   attribute={options.attribute}
                   title={label}
                   options={options}
+                  type={type}
                 />
               );
           }
@@ -155,6 +163,36 @@ const Facets = () => {
       </DynamicWidgets>
     </div>
   );
+};
+
+const Label = (lab, type) => {
+  {
+    if (type !== 'promotion') {
+      return lab;
+    } else {
+      console.log(lab);
+      if (lab === 'true') {
+        return 'En promotion';
+      } else {
+        return '';
+      }
+    }
+  }
+};
+
+const Count = (lab, count, type) => {
+  {
+    if (type !== 'promotion') {
+      return count;
+    } else {
+      console.log(lab);
+      if (lab === 'true') {
+        return count;
+      } else {
+        return '';
+      }
+    }
+  }
 };
 
 export default Facets;

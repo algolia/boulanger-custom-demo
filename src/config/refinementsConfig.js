@@ -83,6 +83,14 @@ export const refinements = [
       limit: 8,
     },
   },
+  {
+    type: 'promotion',
+    header: 'Promotion',
+    label: 'Promotion',
+    options: {
+      attribute: hitsConfig.sale,
+    },
+  },
 ];
 
 // This const defines the labels used in price refinements

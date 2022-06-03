@@ -48,6 +48,7 @@ const Hit = ({ hit, setSrpIsLoaded }) => {
     productName,
     hierarchicalCategoriesLvl0,
     details,
+    sale,
   } = hitsConfig;
 
   const [shouldShowRankingInfo, setShouldShowRankingInfo] = useState(false);
@@ -163,6 +164,11 @@ const Hit = ({ hit, setSrpIsLoaded }) => {
               </p>
             </div>
           </div>
+          {get(hit, sale) && (
+            <div className='promotion-item'>
+              <p>Promotion</p>
+            </div>
+          )}
         </div>
       </>
     </motion.li>
