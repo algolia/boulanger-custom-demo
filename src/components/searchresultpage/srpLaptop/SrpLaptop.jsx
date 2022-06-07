@@ -90,6 +90,7 @@ const SrpLaptop = ({ setSrpIsLoaded, srpIsLoaded }) => {
 
   // Segments
   const segmentOptionalFilters = useRecoilValue(segmentSelectedAtom);
+  console.log(state);
 
   return (
     <>
@@ -148,7 +149,7 @@ const SrpLaptop = ({ setSrpIsLoaded, srpIsLoaded }) => {
               injected ? hitsPerPageInjected : hitsPerPageNotInjected
             }
             analytics={false}
-            userToken={userToken}
+            ruleContexts={userToken}
             enablePersonalization={true}
             filters={
               state?.type === 'filter' && state?.action !== null
@@ -156,7 +157,7 @@ const SrpLaptop = ({ setSrpIsLoaded, srpIsLoaded }) => {
                 : ''
             }
             optionalFilters={segmentOptionalFilters}
-            ruleContexts={state?.type === 'context' ? state.action : ''}
+            // ruleContexts={state?.type === 'context' ? state.action : ''}
             query={queryState && queryState}
             getRankingInfo={true}
           />

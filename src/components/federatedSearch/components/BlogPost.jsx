@@ -15,7 +15,6 @@ const ArticlesItems = ({ hits }) => {
     <div className="articles__wrapper">
       <h3 className="articles__title">Magasins</h3>
       {hits.map((hit, index) => {
-        console.log(hit);
         return (
           <div key={index} className="articles__item">
             <div className="image-wrapper">

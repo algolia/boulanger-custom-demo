@@ -42,7 +42,6 @@ const displayColor = (i) => {
 const CurrentRefinements = ({ items, refine, createURL }) => {
   const { colourHexa } = hitsConfig;
   const currencySymbol = useRecoilValue(currencySymbolAtom);
-  console.log(currencySymbol);
   return (
     <ul className="refinement-container__refinements">
       {items.map((item) => {

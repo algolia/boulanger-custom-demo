@@ -147,7 +147,7 @@ const SrpMobile = ({ setSrpIsLoaded, srpIsLoaded }) => {
         <Configure
           hitsPerPage={injected ? hitsPerPageInjected : hitsPerPageNotInjected}
           analytics={false}
-          userToken={userToken}
+          ruleContexts={userToken}
           enablePersonalization={true}
           filters={
             state?.type === 'filter' && state?.action !== null

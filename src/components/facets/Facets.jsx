@@ -170,7 +170,6 @@ const Label = (lab, type) => {
     if (type !== 'promotion') {
       return lab;
     } else {
-      console.log(lab);
       if (lab === 'true') {
         return 'En promotion';
       } else {
@@ -185,7 +184,6 @@ const Count = (lab, count, type) => {
     if (type !== 'promotion') {
       return count;
     } else {
-      console.log(lab);
       if (lab === 'true') {
         return count;
       } else {

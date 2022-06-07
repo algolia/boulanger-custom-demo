@@ -13,13 +13,13 @@ import { atom } from 'recoil';
 export const personaConfig = [
   { value: 'anon', label: 'No Persona', description: 'Anonymous user' },
   {
-    value: 'stephen_james',
-    label: 'Stephen',
+    value: 'user-jack',
+    label: 'Jack',
     description: 'Stephen James is a man who likes sports shoes',
   },
   {
-    value: 'elizabeth_aniston',
-    label: 'Elizabeth',
+    value: 'user-sylvain',
+    label: 'Sylvain',
     description: 'Elizabeth is a woman who likes blue dresses',
   },
 ];
@@ -79,7 +79,7 @@ export const styles = {
       padding: '0.5rem',
       cursor: 'pointer',
       borderRadius: '0.3rem',
-      fontSize: '1rem',
+      fontSize: '0.8rem',
       '&:hover': {
         backgroundColor: 'black',
         color: 'white',
@@ -90,7 +90,7 @@ export const styles = {
     fontFamily: "'Maven Pro', sans-serif",
     textTransform: 'capitalize',
     cursor: 'pointer',
-    fontSize: '1rem',
+    fontSize: '0.8rem',
   }),
   dropdownIndicator: () => ({
     color: 'black',

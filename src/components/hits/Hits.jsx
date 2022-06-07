@@ -284,7 +284,6 @@ const tailleEcran = (d) => {
   const newArrayEcran = d.filter((obj) =>
     obj.hasOwnProperty("Taille de l'écran")
   );
-  console.log(newArrayEcran);
   if (newArrayEcran[0]) {
     return (
       <div>

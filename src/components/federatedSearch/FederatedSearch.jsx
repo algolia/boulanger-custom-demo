@@ -126,7 +126,7 @@ const FederatedSearch = () => {
               <Configure
                 hitsPerPage={3}
                 query={query}
-                userToken={personaSelect}
+                ruleContexts={personaSelect}
                 enablePersonalization={true}
               />
               <QuerySuggestions />
@@ -143,7 +143,7 @@ const FederatedSearch = () => {
             <Configure
               filters=""
               hitsPerPage={6}
-              userToken={personaSelect}
+              ruleContexts={personaSelect}
               optionalFilters={segmentSelect}
               enablePersonalization={true}
             />

@@ -275,6 +275,7 @@ const ProductDetails = () => {
               itemComponent={RelatedItem}
               maxRecommendations={5}
             />
+            
           </div>
         )}
       </div>

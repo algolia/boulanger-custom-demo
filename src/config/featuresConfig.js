@@ -11,7 +11,7 @@ import { atom } from 'recoil';
 // Should the segment selector be displayed on the screen
 export const shouldHaveSegments = atom({
   key: 'shouldHaveSegments', // unique ID (with respect to other atoms/selectors)
-  default: true, // default value (aka initial value)
+  default: false, // default value (aka initial value)
 });
 
 // Should the language selector be displayed on the screen
@@ -47,7 +47,7 @@ export const shouldHaveInjectedBanners = atom({
 
 export const shouldHavePersona = atom({
   key: 'shouldHavePersona',
-  default: false,
+  default: true,
 });
 
 export const shouldHaveInjectedHits = atom({
@@ -62,12 +62,12 @@ export const shouldHaveFederatedSearch = atom({
 
 export const shouldHaveRelatedProducts = atom({
   key: 'shouldHaveRelatedProductsAtom', // unique ID (with respect to other atoms/selectors)
-  default: false, // default value (aka initial value)
+  default: true, // default value (aka initial value)
 });
 
 export const shouldHaveFbtProducts = atom({
   key: 'shouldHaveFbtProducts', // unique ID (with respect to other atoms/selectors)
-  default: false, // default value (aka initial value)
+  default: true, // default value (aka initial value)
 });
 
 export const shouldHaveDynamicFacet = atom({
