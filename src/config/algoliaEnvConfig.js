@@ -42,7 +42,7 @@ export const indexNames = selector({
   get: ({ get }) => {
     return {
       suggestionsIndex: get(mainIndex) + '_query_suggestions',
-      articlesIndex: 'canda_customDemo_articles',
+      articlesIndex: 'blngr_demo_magasins',
       injectedContentIndex: get(mainIndex) + '_influencers',
     };
   },

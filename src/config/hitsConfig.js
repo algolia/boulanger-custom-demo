@@ -56,13 +56,10 @@ export const PDPHitSections = {
 export const contentArticlesConfig = atom({
   key: 'contentArticlesConfig', // unique ID (with respect to other atoms/selectors)
   default: {
-    objectID: 'objectID',
-    title: 'Title',
-    headings: 'Subtitle',
-    content: 'content',
-    date: 'Date',
-    description: 'description',
-    image: 'Image Link',
+    name: 'name',
+    url: 'url',
+    address: 'address',
+    regions: 'regions',
   },
 });
 

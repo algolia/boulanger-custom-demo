@@ -14,7 +14,7 @@ export const federatedSearchConfig = {
   showQuerySuggestions: true,
   showCategories: true,
   showProducts: true,
-  showBlogPosts: false,
+  showBlogPosts: true,
 };
 
 // Please ignore

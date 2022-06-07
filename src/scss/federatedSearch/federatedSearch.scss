@@ -188,11 +188,14 @@
       font-size: 0.8rem;
       font-weight: bold;
       margin-bottom: 0.5rem;
+      color: $orange-boulanger;
+      font-family: $main-font;
     }
     .date {
       font-size: 0.8rem;
       text-align: right;
       margin-bottom: 0.5rem;
+      font-family: $main-font;
     }
     .subtitle {
       font-size: 0.8rem;
@@ -203,6 +206,20 @@
       display: -webkit-box;
       text-overflow: ellipsis;
       -webkit-line-clamp: 4;
+      font-family: $main-font;
+    }
+    .button {
+      display: flex;
+      justify-content: center;
+      .button-nav {
+        background-color: $orange-boulanger;
+        color: $white-color;
+        padding: 0.8rem;
+        border-radius: 8px;
+        font-weight: 600;
+        margin: 1rem auto;
+        font-family: $main-font;
+      }
     }
     &:hover {
       background-color: $grey-dark-color-20;

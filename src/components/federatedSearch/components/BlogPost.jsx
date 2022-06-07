@@ -10,25 +10,30 @@ import { contentArticlesConfig } from '@/config/hitsConfig';
 import get from 'lodash/get';
 
 const ArticlesItems = ({ hits }) => {
-  const { image, date, title, headings } = useRecoilValue(
-    contentArticlesConfig
-  );
-
+  const { name, url, address, regions } = useRecoilValue(contentArticlesConfig);
   return (
     <div className="articles__wrapper">
-      <h3 className="articles__title">ARTICLES</h3>
+      <h3 className="articles__title">Magasins</h3>
       {hits.map((hit, index) => {
+        console.log(hit);
         return (
           <div key={index} className="articles__item">
             <div className="image-wrapper">
-              <img src={get(hit, image)} alt="" />
-
-              <p className="date">{get(hit, date)}</p>
+              <p className="date">{get(hit, name)}</p>
+              <img
+                src="https://dynl.mktgcdn.com/p/EVspjJGcxy6y6RRolfQs8rl6Xu5X7HJpGGAC71NucEg/600x292.jpg"
+                alt=""
+              />
               <div className="overlay"></div>
             </div>
             <div className="infos">
-              <p className="title">{get(hit, title)}</p>
-              <p className="subtitle">{get(hit, headings)}</p>
+              <p className="title">{get(hit, address)}</p>
+              <p className="subtitle">{get(hit, regions)}</p>
+              <div className="button">
+                <a href={get(hit, url)} className="button-nav">
+                  Visitez le magasin
+                </a>
+              </div>
             </div>
           </div>
         );
