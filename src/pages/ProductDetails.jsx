@@ -53,6 +53,8 @@ import useSendAlgoliaEvent from '@/hooks/useSendAlgoliaEvent';
 // Used to show alert when add to cart event is sent
 import { alertContent, isAlertOpen } from '@/config/demoGuideConfig';
 
+import { Rating } from '@/components/carousels/HomeCarousel';
+
 const ProductDetails = () => {
   // For alert on sending add to cart event
   const setAlert = useSetRecoilState(alertContent);
@@ -103,6 +105,7 @@ const ProductDetails = () => {
     sizeFilter,
     colour,
     colourHexa,
+    rating,
   } = hitsConfig;
 
   const hexaCode = get(hit, colourHexa)?.split(';')[1];
@@ -117,20 +120,19 @@ const ProductDetails = () => {
       exit={framerMotionPage.exit}
       transition={framerMotionPage.transition}
     >
+      <div className="pdp__infos">
+        <h1>
+          {PDPHitSections.productName && (
+            <p className="name">{get(hit, productName)}</p>
+          )}
+        </h1>
+        <Rating ratingInfos={get(hit, rating)} />
+      </div>
       <div
         className={`${
           mobile || tablet ? 'pdp-mobile__wrapper' : 'pdp__wrapper'
         }`}
       >
-        <div
-          className={`${
-            mobile || tablet ? 'pdp-mobile__backBtn' : 'pdp__backBtn'
-          }`}
-          onClick={() => navigate(-1)}
-        >
-          <ChevronLeft />
-          <p>Back to search</p>
-        </div>
         <motion.div
           initial={{
             opacity: 0,
@@ -179,6 +181,20 @@ const ProductDetails = () => {
               transition: { delay: 0.5, framerMotionTransition },
             }}
           >
+            {PDPHitSections.price && (
+              <motion.p
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 1, framerMotionTransition },
+                }}
+                className="price"
+              >
+                <Price hit={hit} />
+              </motion.p>
+            )}
             {PDPHitSections.brand && <p className="brand">{get(hit, brand)}</p>}
             {PDPHitSections.productName && (
               <p className="name">{get(hit, productName)}</p>
@@ -229,22 +245,8 @@ const ProductDetails = () => {
                 }}
               >
                 <i className="fa-solid fa-shopping-cart"></i>
-                <p>Add to cart</p>
+                <p>Ajouter au panier</p>
               </motion.button>
-            )}
-            {PDPHitSections.price && (
-              <motion.p
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: 1,
-                  transition: { delay: 1, framerMotionTransition },
-                }}
-                className="price"
-              >
-                <Price hit={hit} />
-              </motion.p>
             )}
           </motion.div>
         </div>

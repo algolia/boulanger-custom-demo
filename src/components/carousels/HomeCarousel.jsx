@@ -139,7 +139,7 @@ const CustomHitsCarousel = connectHits(Carousel);
 
 export default HomeCarousel;
 
-const Rating = ({ ratingInfos }) => {
+export const Rating = ({ ratingInfos }) => {
   if (ratingInfos > 0 && ratingInfos < 1) {
     return (
       <div className="rating_stars">

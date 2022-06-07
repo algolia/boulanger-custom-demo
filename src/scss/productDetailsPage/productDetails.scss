@@ -10,8 +10,25 @@
     display: flex;
     align-items: stretch;
     height: 100%;
+    width: 70%;
+    margin: 0 auto;
   }
-
+  &__infos {
+    width: 70%;
+    margin: 0 auto;
+    color: $orange-boulanger;
+    margin-bottom: 2rem;
+    p {
+      color: $orange-boulanger;
+      font-weight: 800;
+      font-size: 2rem;
+    }
+    .rating_stars {
+      position: relative !important;
+      top: 0;
+      margin-top: 1rem;
+    }
+  }
   &__left {
     width: 50%;
     display: flex;
@@ -62,11 +79,15 @@
       .brand {
         color: $orange-boulanger;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 2rem;
         text-transform: capitalize;
+        margin-bottom: 1rem;
       }
       .name {
         text-transform: capitalize;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $text-color;
       }
       .color {
         margin-top: 1rem;
@@ -76,10 +97,25 @@
       .add-to-cart {
         margin-top: 5rem;
         align-self: flex-start;
+        background-color: $orange-boulanger;
+        padding: 1rem;
+        border-radius: 5px;
+        color: $white-color;
+        display: flex;
+        width: 70%;
+        align-items: center;
+        p {
+          width: 100%;
+          color: $white-color;
+          font-weight: 600;
+        }
+        svg {
+          display: none;
+        }
       }
       .price {
-        color: $blue-algolia;
-        font-weight: bold;
+        color: $text-color;
+        font-weight: 900;
         font-size: 2rem;
       }
       .sizes {
