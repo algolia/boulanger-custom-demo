@@ -165,7 +165,7 @@ const Hit = ({ hit, setSrpIsLoaded }) => {
             </div>
           </div>
           {get(hit, sale) && (
-            <div className='promotion-item'>
+            <div className="promotion-item">
               <p>Promotion</p>
             </div>
           )}
@@ -187,7 +187,9 @@ const detailHits = (categ, details) => {
             if (d['Poids net']) {
               return (
                 <>
-                  <li> Poids: {d['Poids net']} Kg </li>
+                  <li>
+                    <span>Poids:</span> {d['Poids net']} Kg{' '}
+                  </li>
                 </>
               );
             }
@@ -196,12 +198,12 @@ const detailHits = (categ, details) => {
               d['Hauteur produit (cm)'] !== undefined &&
               d['Profondeur produit (cm)'] !== undefined
             ) {
-              console.log('Here');
               return (
                 <>
                   <li>
-                    LxHxP: {d['Largeur produit (cm)']} X
-                    {d['Hauteur produit(cm)']} X {d['Profondeur produit (cm)']}
+                    <span>LxHxP::</span>
+                    {d['Largeur produit (cm)']} X{d['Hauteur produit(cm)']} X{' '}
+                    {d['Profondeur produit (cm)']}
                   </li>
                 </>
               );
@@ -210,19 +212,50 @@ const detailHits = (categ, details) => {
           <li>{filterArrayForEnergy(details)}</li>
         </ul>
       );
-    default:
+    case 'Loisirs à la maison':
       return (
-        <div>
-          <h1>NO</h1>
-        </div>
+        <ul className="details-srp">
+          <li>{filterArrayForSonore(details)}</li>
+          <li>{tailleEcran(details)}</li>
+          <li>{technologie(details)}</li>
+          <li>{filterArrayForEnergy(details)}</li>
+        </ul>
       );
+    case 'Les activités Nomades':
+      return (
+        <ul className="details-srp">
+          <li>{tailleEcran(details)}</li>
+          <li>{couleur(details)}</li>
+          <li>{resolution(details)}</li>
+        </ul>
+      );
+    case 'Accessoires et consommables':
+      return (
+        <ul className="details-srp">
+          <li>{utilisation(details)}</li>
+          <li>{type(details)}</li>
+        </ul>
+      );
+    case 'Maison & Objets connectés':
+      return (
+        <ul className="details-srp">
+          <li>{utilisation(details)}</li>
+          <li>{lePlus(details)}</li>
+        </ul>
+      );
+    default:
+      return '';
   }
 };
 
 const filterArrayForSonore = (d) => {
   const newArraySonore = d.filter((obj) => obj.hasOwnProperty('Niveau sonore'));
   if (newArraySonore[1]) {
-    return 'Bruit:' + newArraySonore[0]['Niveau sonore'];
+    return (
+      <div>
+        <span>Bruit:</span> {newArraySonore[0]['Niveau sonore']}
+      </div>
+    );
   }
 };
 
@@ -231,11 +264,99 @@ const filterArrayForEnergy = (d) => {
     obj.hasOwnProperty('Classe énergétique')
   );
   if (newArrayEnergy.length && newArrayEnergy[1] !== undefined) {
-    return 'Energie: ' + newArrayEnergy[1]['Classe énergétique'];
+    return;
+    <div>
+      <span>Energie:</span> {newArrayEnergy[1]['Classe énergétique']}
+    </div>;
   }
   if (newArrayEnergy.length && newArrayEnergy[1] === undefined) {
-    return 'Energie: ' + newArrayEnergy[0]['Classe énergétique'];
+    return (
+      <div>
+        <span>Energie:</span> {newArrayEnergy[0]['Classe énergétique']}
+      </div>
+    );
   } else {
     return '';
+  }
+};
+
+const tailleEcran = (d) => {
+  const newArrayEcran = d.filter((obj) =>
+    obj.hasOwnProperty("Taille de l'écran")
+  );
+  console.log(newArrayEcran);
+  if (newArrayEcran[0]) {
+    return (
+      <div>
+        <span>Taille écran:</span> {newArrayEcran[0]["Taille de l'écran"]}
+      </div>
+    );
+  }
+};
+
+const technologie = (d) => {
+  const newArrayEcran = d.filter((obj) => obj.hasOwnProperty('Technologie'));
+  if (newArrayEcran[1]) {
+    return (
+      <div>
+        <span>Téchnologie:</span> {newArrayEcran[0]['Technologie']}
+      </div>
+    );
+  }
+};
+
+const couleur = (d) => {
+  const newArrayEcran = d.filter((obj) => obj.hasOwnProperty('Couleur'));
+  if (newArrayEcran[0]) {
+    return (
+      <div>
+        <span>Couleur:</span> {newArrayEcran[0]['Couleur']}
+      </div>
+    );
+  }
+};
+
+const resolution = (d) => {
+  const newArrayEcran = d.filter((obj) =>
+    obj.hasOwnProperty("Résolution de l'écran")
+  );
+  if (newArrayEcran[0]) {
+    return (
+      <div>
+        <span>Résolution:</span> {newArrayEcran[0]["Résolution de l'écran"]}
+      </div>
+    );
+  }
+};
+
+const utilisation = (d) => {
+  const newArrayEcran = d.filter((obj) => obj.hasOwnProperty('Utilisation'));
+  if (newArrayEcran[0]) {
+    return (
+      <div>
+        <span>Utilisation:</span> {newArrayEcran[0]['Utilisation']}
+      </div>
+    );
+  }
+};
+
+const type = (d) => {
+  const newArrayEcran = d.filter((obj) => obj.hasOwnProperty('Type'));
+  if (newArrayEcran[0]) {
+    return (
+      <div>
+        <span>Type:</span> {newArrayEcran[0]['Type']}
+      </div>
+    );
+  }
+};
+const lePlus = (d) => {
+  const newArrayEcran = d.filter((obj) => obj.hasOwnProperty('Le +'));
+  if (newArrayEcran[0]) {
+    return (
+      <div>
+        <span>Les plus:</span> {newArrayEcran[0]['Le +']}
+      </div>
+    );
   }
 };

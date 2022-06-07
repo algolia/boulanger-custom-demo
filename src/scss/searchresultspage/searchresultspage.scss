@@ -196,7 +196,7 @@
   display: none;
 }
 
-.detail-price{
+.detail-price {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -204,9 +204,13 @@
     // display: grid;
     // grid-template-rows: auto;
     // grid-template-columns: 1fr;
-    li{
+    li {
       margin-bottom: 0.2rem;
       font-size: 0.8rem;
+      span {
+        color: $orange-boulanger;
+        font-weight: 600;
+      }
     }
   }
 }
