@@ -11,10 +11,7 @@ import { alertContent, isAlertOpen } from '@/config/demoGuideConfig';
 import Select from 'react-select';
 
 // Import configuration
-import {
-  DemoGuideRedirectConfig,
-  styles,
-} from '@/config/demoGuideConfig';
+import { DemoGuideRedirectConfig, styles } from '@/config/demoGuideConfig';
 
 const DemoGuideRedirect = () => {
   // Recoil State - update query in searchBar
@@ -28,11 +25,11 @@ const DemoGuideRedirect = () => {
     setAlertOpen(true);
     setAlert(content);
     setTimeout(() => setAlertOpen(false), 5000);
-  }
+  };
 
   return (
     <div className="search-terms">
-      <h3>Redirect</h3>
+      <h3>Redirection</h3>
       <div className="search-terms__infos">
         {DemoGuideRedirectConfig.map((item, i) => {
           return (

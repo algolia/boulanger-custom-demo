@@ -255,7 +255,6 @@ const ProductDetails = () => {
       <div className="recommend">
         {shouldHaveRelatedProductsValue && (
           <div>
-            <h3>Related Products</h3>
             <RelatedProducts
               recommendClient={recommendClient}
               indexName={index}
@@ -267,7 +266,6 @@ const ProductDetails = () => {
         )}
         {shouldHaveFbtProductsValue && (
           <div>
-            <h3>Frequently Bought Together</h3>
             <FrequentlyBoughtTogether
               recommendClient={recommendClient}
               indexName={index}
@@ -275,7 +273,6 @@ const ProductDetails = () => {
               itemComponent={RelatedItem}
               maxRecommendations={5}
             />
-            
           </div>
         )}
       </div>
@@ -284,3 +281,16 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
+
+// function defaultRender(props) {
+//   if (props.recommendations.length === 0) {
+//     return null;
+//   }
+
+//   return (
+//     <section className="auc-Recommend">
+//       {props.translations.title && <h3>{props.translations.title}</h3>}
+//       <props.View />
+//     </section>
+//   );
+// }

@@ -24,7 +24,7 @@ export const shouldShowAlert = atom({
 // Should we show the search terms section in the demo guide
 export const shouldShowSearchTerms = atom({
   key: 'shouldShowSearchTerms',
-  default: true,
+  default: false,
 });
 
 // What would be the content of the select in this section
@@ -92,7 +92,7 @@ export const searchTermsInformations = [
 // Should we show the applied rules Switcher
 export const shouldShowAppliedRulesSwitcher = atom({
   key: 'shouldShowAppliedRulesSwitcher',
-  default: true,
+  default: false,
 });
 // What should be the information showed to the user
 export const appliedRulesInformations = [
@@ -132,7 +132,7 @@ export const searchPersonaInformations = personaConfig.map((persona) => {
 // Should we show the injected content section in the demo guide
 export const shouldShowInjectedContent = atom({
   key: 'shouldShowInjectedContent',
-  default: true,
+  default: false,
 });
 
 // What would be the content of the select in this section
@@ -160,7 +160,7 @@ export const DemoGuideInjectedContentConfig = [
 // Should we show the Dynamic filter/ Facet ordering section in the demo guide
 export const shouldShowDynamicFilters = atom({
   key: 'shouldShowDynamicFilters',
-  default: true,
+  default: false,
 });
 
 // What would be the content of the select in this section
@@ -190,10 +190,16 @@ export const shouldShowRedirects = atom({
 export const DemoGuideRedirectConfig = [
   { value: '', label: 'Choose' },
   {
-    value: 'Faq',
-    label: 'FAQ',
-    alertContent: "Redirecting the user to Algolia's homepage",
-    details: "Will redirect the user to Algolia's homepage",
+    value: 'Sav',
+    label: 'Sav',
+    alertContent: "Redirige l'utilisateur vers la page SAV",
+    details: "Redirige l'utilisateur vers la page SAV",
+  },
+  {
+    value: 'apple',
+    label: 'Apple',
+    alertContent: "Redirige l'utilisateur vers la page dédiée à Apple",
+    details: "Redirige l'utilisateur vers la page dédiée à Apple",
   },
 ];
 
@@ -213,23 +219,23 @@ export const shouldShowBanners = atom({
 export const searchBannersConfig = [
   { value: '', label: 'Choose' },
   {
-    value: 'algolia',
-    label: 'Algolia',
-    alertContent: 'Displaying an Algolia Banner',
-    details: 'Will display an Algolia Banner',
+    value: 'iphone',
+    label: 'Iphone',
+    alertContent: 'Affiche une banière des produits Apple',
+    details: 'Affiche une banière des produits Apple',
   },
-  {
-    value: 'help',
-    label: 'Help',
-    alertContent: 'Displaying an Help banner',
-    details: 'Will display an Help banner',
-  },
-  {
-    value: 'woman',
-    label: 'Woman',
-    alertContent: 'Displaying a Woman banner',
-    details: 'Will display a Woman banner',
-  },
+  // {
+  //   value: 'help',
+  //   label: 'Help',
+  //   alertContent: 'Displaying an Help banner',
+  //   details: 'Will display an Help banner',
+  // },
+  // {
+  //   value: 'woman',
+  //   label: 'Woman',
+  //   alertContent: 'Displaying a Woman banner',
+  //   details: 'Will display a Woman banner',
+  // },
 ];
 
 // Please ignore this atom - DON'T TOUCH THIS

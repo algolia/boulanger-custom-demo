@@ -1,3 +1,4 @@
+// import { useState, useEffect } from 'react';
 // Component for rendering the Related Products through Recommend
 
 // Import Hit configuration for use with Recoil
@@ -13,6 +14,19 @@ import { Heart } from '@/assets/svg/SvgIndex';
 import Price from '@/components/price/price.jsx';
 
 const RelatedItem = ({ item }) => {
+  // const [itemsDefined, setItemsDefined] = useState(0);
+  // useEffect(() => {
+  //   let array = [];
+  //   array.push(item);
+  //   setItemsDefined(array.length);
+  //   return itemsDefined;
+  // }, [item]);
+
+  // console.log(
+  //   '🚀 ~ file: RelatedProducts.jsx ~ line 17 ~ RelatedItem ~ itemsDefined',
+  //   itemsDefined
+  // );
+
   // Get hit attribute from config file
   const { image, category, productName } = hitsConfig;
 

@@ -36,7 +36,7 @@ const SearchBanners = () => {
 
   return (
     <div className="search-terms">
-      <h3>Banners Display</h3>
+      <h3>Affichage des Bannières</h3>
       <div className="search-terms__infos">
         {searchBannersConfig.map((item, i) => {
           return (

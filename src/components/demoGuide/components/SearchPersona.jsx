@@ -36,7 +36,7 @@ const SearchPersona = () => {
 
   return (
     <div className="search-terms">
-      <h3>Search Persona</h3>
+      <h3>Selection des Persona</h3>
       <div className="search-terms__infos">
         {searchPersonaInformations.map((item, i) => {
           return (

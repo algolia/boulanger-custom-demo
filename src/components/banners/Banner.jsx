@@ -16,12 +16,13 @@ const Banner = () => {
                 className="banner-srp"
                 // NB Inline style is necessary here due to how background images work
                 style={{
-                  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.45)), url(${item.banner})`,
+                  backgroundImage: `url(${item.banner})`,
                 }}
+                onClick={() => (window.location.href = item.link)}
               >
                 <div className="banner-srp__infos">
-                  <h3>{item.title}</h3>
-                  <p>{item.content}</p>
+                  {/* <h3>{item.title}</h3> */}
+                  {/* <p>{item.content}</p> */}
                 </div>
               </div>
             )

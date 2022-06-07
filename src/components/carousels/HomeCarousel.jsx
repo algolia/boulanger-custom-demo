@@ -45,6 +45,7 @@ const HomeCarousel = ({ context, title }) => {
           ruleContexts={context}
           optionalFilters={segmentOptionalFilters}
           userToken={userToken}
+          query={''}
         />
         <CustomHitsCarousel title={title} />
       </Index>

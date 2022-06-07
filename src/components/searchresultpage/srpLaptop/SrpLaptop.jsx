@@ -90,7 +90,7 @@ const SrpLaptop = ({ setSrpIsLoaded, srpIsLoaded }) => {
 
   // Segments
   const segmentOptionalFilters = useRecoilValue(segmentSelectedAtom);
-  console.log(state);
+  // console.log(state);
 
   return (
     <>
