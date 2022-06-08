@@ -42,6 +42,13 @@
       $blue-algolia,
       $blue-algolia
     );
+    &__infos {
+      &__down {
+        position: relative !important;
+        right: -120px;
+        bottom: 0;
+      }
+    }
   }
 }
 
