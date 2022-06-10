@@ -154,7 +154,7 @@ const FederatedSearch = () => {
         {showBlogPosts && !mobile && !tablet && (
           <div className="articles federatedSearch__right">
             <Index indexName={articlesIndex}>
-              <Configure hitsPerPage={1} query={query} />
+              <Configure hitsPerPage={3} query={query} />
               <Articles />
             </Index>
           </div>
