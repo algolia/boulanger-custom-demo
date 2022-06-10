@@ -124,7 +124,7 @@ const FederatedSearch = () => {
           {showQuerySuggestions && (
             <Index searchClient={searchClient} indexName={suggestionsIndex}>
               <Configure
-                hitsPerPage={3}
+                hitsPerPage={6}
                 query={query}
                 ruleContexts={personaSelect}
                 enablePersonalization={true}

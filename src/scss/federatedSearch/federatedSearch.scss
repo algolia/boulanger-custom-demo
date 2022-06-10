@@ -83,6 +83,14 @@
         &:hover {
           font-weight: bold;
         }
+        .ais-Highlight {
+          .ais-Highlight-nonHighlighted {
+            font-style: normal !important;
+          }
+          .ais-Highlight-highlighted {
+            color: $orange-boulanger;
+          }
+        }
       }
     }
   }
@@ -222,21 +230,21 @@
         font-family: $main-font;
       }
     }
-    .infos{
+    .infos {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      svg{
+      svg {
         margin-left: 0.3rem;
         width: 10px;
       }
-      .title{
+      .title {
         color: $text-color;
         font-size: 0.6rem;
         margin-bottom: 0.8rem;
       }
     }
-    .line{
+    .line {
       width: 90%;
       border-bottom: 1px solid $grey-dark-color-20;
       margin: 0 auto;
