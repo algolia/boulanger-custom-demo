@@ -31,6 +31,7 @@ const ArticlesItems = ({ hits }) => {
                 </a>
               </div> */}
             </div>
+            <div className="line"></div>
           </div>
         );
       })}
