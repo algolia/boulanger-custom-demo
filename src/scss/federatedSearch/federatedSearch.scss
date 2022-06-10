@@ -5,7 +5,8 @@
   padding: 2rem;
   position: absolute;
   background-color: $white-color;
-  z-index: 40;
+  z-index: 2;
+  top: 14rem;
 
   &__wrapper {
     display: flex;
