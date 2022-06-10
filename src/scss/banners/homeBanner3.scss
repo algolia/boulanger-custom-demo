@@ -5,7 +5,8 @@
 .home-banner3-container {
   position: relative;
   &__image {
-    width: 100%;
+    width: 85%;
+    margin: 0 auto;
     position: relative;
     z-index: 1;
     .overlay {
