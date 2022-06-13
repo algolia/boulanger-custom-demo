@@ -75,21 +75,18 @@ export const Main = ({ isLoaded }) => {
             <DemoGuide setshowDemoGuide={setshowDemoGuide} />
           )}
         </AnimatePresence>
-        <AnimatePresence initial={true} exitBeforeEnter>
-          <Routes key={location.pathname} location={location}>
-            <Route
-              path="/"
-              element={<HomePage setIsMounted={setIsMounted} />}
-            />
-            <Route
-              path="/search"
-              element={<SearchResultsPage setIsMounted={setIsMounted} />}
-            />
-            {/* objectID is the unique identifier for an algolia record */}
-            <Route path="/search/:objectID" element={<ProductDetails />} />
-          </Routes>
-          {isMounted && <Footer />}
-        </AnimatePresence>
+        {/* <AnimatePresence initial={true} exitBeforeEnter> */}
+        <Routes key={location.pathname} location={location}>
+          <Route path="/" element={<HomePage setIsMounted={setIsMounted} />} />
+          <Route
+            path="/search"
+            element={<SearchResultsPage setIsMounted={setIsMounted} />}
+          />
+          {/* objectID is the unique identifier for an algolia record */}
+          <Route path="/search/:objectID" element={<ProductDetails />} />
+        </Routes>
+        {isMounted && <Footer />}
+        {/* </AnimatePresence> */}
         {shouldShowAlertAtom && <AlertNavigation />}
         {isRulesSwitchToggleChecked && <CustomAppliedRules />}
       </div>
