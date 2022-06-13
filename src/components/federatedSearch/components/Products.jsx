@@ -27,13 +27,14 @@ const Hits = ({ hits }) => {
   const query = useRecoilValue(queryAtom);
 
   // Get hit attribute from config file
-  const { objectID, image, productName, brand } = hitsConfig;
+  const { objectID, image, productName, hierarchicalCategoriesLvl5, category } =
+    hitsConfig;
 
   return (
     <div className="products">
       <div className="products__header">
         {personaSelected !== '' && query === '' ? (
-          <h3 className="products__title">Recommended for you</h3>
+          <h3 className="products__title">Recommandé pour vous</h3>
         ) : (
           <h3 className="products__title">Products</h3>
         )}
@@ -53,7 +54,12 @@ const Hits = ({ hits }) => {
                   <img src={get(hit, image)} alt="" />
                 </div>
                 <div className="infos">
-                  <p className="brand">{get(hit, brand)}</p>
+                  <p className="brand">
+                    {Categ(
+                      get(hit, hierarchicalCategoriesLvl5),
+                      get(hit, category)
+                    )}
+                  </p>
                   <p className="name">{get(hit, productName)}</p>
                   <p className="price">
                     <Price hit={hit} />
@@ -77,3 +83,15 @@ const Hits = ({ hits }) => {
 const Products = connectHits(Hits);
 
 export default memo(Products);
+
+const Categ = (c, i) => {
+  if (c) {
+    const newCateg = c.split('>');
+    console.log(newCateg[5]);
+    return newCateg[5];
+  } else if (i) {
+    return i;
+  } else {
+    return '';
+  }
+};
