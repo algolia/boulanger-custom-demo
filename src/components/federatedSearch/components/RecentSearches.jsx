@@ -20,7 +20,7 @@ const RecentSearches = memo(() => {
   if (cleanSearches && cleanSearches.length !== 0) {
     return (
       <div className="recentSearches">
-        <h3 className="recentSearches__title">Recent Searches</h3>
+        <h3 className="recentSearches__title">Recherches Récentes</h3>
         <ul className="recentSearches__items">
           {cleanSearches
             .reverse()

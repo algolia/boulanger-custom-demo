@@ -34,7 +34,7 @@ const Hits = ({ hits }) => {
     <div className="products">
       <div className="products__header">
         {personaSelected !== '' && query === '' ? (
-          <h3 className="products__title">Recommended for you</h3>
+          <h3 className="products__title">Recommandé pour vous</h3>
         ) : (
           <h3 className="products__title">Products</h3>
         )}

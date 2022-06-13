@@ -78,13 +78,13 @@ const FederatedSearch = () => {
     () => setIsFederated(false)
   );
 
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = 'auto';
-      setIsFederated(false);
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.body.style.overflow = 'hidden';
+  //   return () => {
+  //     document.body.style.overflow = 'auto';
+  //     setIsFederated(false);
+  //   };
+  // }, []);
 
   // Federated search configuration
   const {
