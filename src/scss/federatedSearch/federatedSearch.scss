@@ -129,23 +129,23 @@
     color: $orange-boulanger;
   }
   &__items {
-    display: flex;
+    display: grid;
+    grid-template-rows: auto;
     gap: 0.5rem;
     flex-wrap: wrap;
     // padding: 1rem;
   }
   &__item {
     display: flex;
-    align-items: flex-start;
     gap: 1rem;
     width: 47%;
     cursor: pointer;
-    flex-direction: column;
     .image-wrapper {
       // max-width: 30%;
       display: flex;
       justify-content: center;
-      width: 100%;
+      width: 20%;
+      height: 50%;
       img {
         width: 100%;
         object-fit: contain;
@@ -154,16 +154,25 @@
     }
     .infos {
       text-transform: capitalize;
+      position: absolute;
+      left: 25rem;
 
       .brand {
-        color: $orange-boulanger;
+        color: $grey-dark-color;
+        text-transform: uppercase;
         font-weight: bold;
+        font-size: 1rem;
+        margin: 1rem 0 0.6rem 0;
+      }
+      .name{
         font-size: 0.8rem;
+        font-weight: 800;
       }
       .price {
-        color: $orange-color;
-        font-size: 0.9rem;
-        font-weight: bold;
+        color: $main-color;
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-top: 2rem;
       }
     }
     // &:hover {
