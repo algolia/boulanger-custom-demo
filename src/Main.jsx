@@ -75,7 +75,7 @@ export const Main = ({ isLoaded }) => {
             <DemoGuide setshowDemoGuide={setshowDemoGuide} />
           )}
         </AnimatePresence>
-        {/* <AnimatePresence initial={true} exitBeforeEnter> */}
+        <AnimatePresence initial={true} exitBeforeEnter>
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<HomePage setIsMounted={setIsMounted} />} />
           <Route
@@ -86,7 +86,7 @@ export const Main = ({ isLoaded }) => {
           <Route path="/search/:objectID" element={<ProductDetails />} />
         </Routes>
         {isMounted && <Footer />}
-        {/* </AnimatePresence> */}
+        </AnimatePresence>
         {shouldShowAlertAtom && <AlertNavigation />}
         {isRulesSwitchToggleChecked && <CustomAppliedRules />}
       </div>
