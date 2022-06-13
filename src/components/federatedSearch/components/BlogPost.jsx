@@ -18,7 +18,7 @@ const ArticlesItems = ({ hits }) => {
       <h3 className="articles__title">Magasins</h3>
       {hits.map((hit, index) => {
         return (
-          <div key={index} className="articles__item">
+          <a href={get(hit, url)} key={index} className="articles__item">
             <div className="image-wrapper">
               <div className="overlay"></div>
             </div>
@@ -32,7 +32,7 @@ const ArticlesItems = ({ hits }) => {
               </div> */}
             </div>
             <div className="line"></div>
-          </div>
+          </a>
         );
       })}
     </div>
