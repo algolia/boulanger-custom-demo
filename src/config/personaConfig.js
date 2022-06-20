@@ -43,7 +43,7 @@ export const styles = {
     marginTop: '1rem',
     background: 'white',
     width: '100%',
-    zIndex: '10',
+    zIndex: '10000',
     boxShadow: '0px 3px 5px 1px rgba(50, 50, 50, 0.25);',
     borderRadius: '0.3rem',
     padding: '0rem',
