@@ -43,14 +43,20 @@ const Hits = ({ hits }) => {
         {hits.length ? (
           hits.map((hit) => {
             return (
-              <li key={hit[objectID]} className="products__item">
-                <div
-                  className="image-wrapper"
-                  onClick={() => {
-                    hitState(hit);
-                    navigate(`/search/${hit[objectID]}`);
-                  }}
-                >
+              <li
+                key={hit[objectID]}
+                className="products__item"
+                onClick={() => {
+                  console.log(
+                    '🚀 ~ file: Products.jsx ~ line 74 ~ hits.map ~ hit',
+                    hit
+                  );
+                  hitState(hit);
+                  navigate(`/search/${hit[objectID]}`);
+                  useStoreIdToLocalStorage(hit[objectID]);
+                }}
+              >
+                <div className="image-wrapper">
                   <img src={get(hit, image)} alt="" />
                 </div>
                 <div className="infos">
@@ -87,7 +93,6 @@ export default memo(Products);
 const Categ = (c, i) => {
   if (c) {
     const newCateg = c.split('>');
-    console.log(newCateg[5]);
     return newCateg[5];
   } else if (i) {
     return i;

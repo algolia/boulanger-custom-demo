@@ -114,7 +114,6 @@ const Hit = ({ hit, setSrpIsLoaded }) => {
             !shouldShowRankingInfo && setIsHovered(true);
           }}
           onClick={() => {
-            console.log('Je clique', hit);
             hitState(hit);
             navigate(`/search/${hit[objectID]}`);
             useStoreIdToLocalStorage(hit[objectID]);
