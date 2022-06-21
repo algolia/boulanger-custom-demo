@@ -77,20 +77,20 @@ const HomePage = ({ setIsMounted }) => {
       {isFederated && isFederatedOpen && (
         <AnimatePresence>
           {/* Loads federated search if isFederated is true */}
-          <Suspense fallback={<Loader />}>
+          <Suspense fallback={''}>
             <FederatedSearch />
           </Suspense>
         </AnimatePresence>
       )}
 
       {/* Load custom banners */}
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={''}>
         <CustomHomeBanners />
       </Suspense>
 
       {isCarousel &&
         carouselConfig.map((carousel, i) => (
-          <Suspense key={i} fallback={<Loader />}>
+          <Suspense key={i} fallback={''}>
             <HomeCarousel context={carousel.context} title={carousel.title} />
           </Suspense>
         ))}
