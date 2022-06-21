@@ -14,19 +14,19 @@ import Loader from '@/components/loader/Loader';
 import { Main } from './Main.jsx';
 
 const App = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 3000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoaded(true);
+  //   }, 3000);
+  // }, []);
 
   return (
     <RecoilRoot>
       <Router>
-        {isLoaded === false && <Loader isLoaded={isLoaded} />}
-        <Main isLoaded={isLoaded} setIsLoaded={setIsLoaded} />
+        {/* {isLoaded === false && <Loader isLoaded={isLoaded} />} */}
+        <Main />
       </Router>
     </RecoilRoot>
   );
