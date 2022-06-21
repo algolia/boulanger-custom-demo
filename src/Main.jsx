@@ -66,7 +66,7 @@ export const Main = ({ isLoaded }) => {
   return (
     <InstantSearch searchClient={searchClient} indexName={index}>
       <CustomStateResults />
-      <div className={`${isLoaded ? 'visible' : 'hidden'}`}>
+      <div className="visible">
         <img src={HeaderTop} alt="" />
         <Header />
         <DemoGuideOpener />
@@ -76,16 +76,19 @@ export const Main = ({ isLoaded }) => {
           )}
         </AnimatePresence>
         <AnimatePresence initial={true} exitBeforeEnter>
-        <Routes key={location.pathname} location={location}>
-          <Route path="/" element={<HomePage setIsMounted={setIsMounted} />} />
-          <Route
-            path="/search"
-            element={<SearchResultsPage setIsMounted={setIsMounted} />}
-          />
-          {/* objectID is the unique identifier for an algolia record */}
-          <Route path="/search/:objectID" element={<ProductDetails />} />
-        </Routes>
-        {isMounted && <Footer />}
+          <Routes key={location.pathname} location={location}>
+            <Route
+              path="/"
+              element={<HomePage setIsMounted={setIsMounted} />}
+            />
+            <Route
+              path="/search"
+              element={<SearchResultsPage setIsMounted={setIsMounted} />}
+            />
+            {/* objectID is the unique identifier for an algolia record */}
+            <Route path="/search/:objectID" element={<ProductDetails />} />
+          </Routes>
+          {isMounted && <Footer />}
         </AnimatePresence>
         {shouldShowAlertAtom && <AlertNavigation />}
         {isRulesSwitchToggleChecked && <CustomAppliedRules />}
