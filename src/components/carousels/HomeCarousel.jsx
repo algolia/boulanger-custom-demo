@@ -103,7 +103,11 @@ const Carousel = ({ hits, title }) => {
               <motion.div key={i} className="item">
                 <div className="carousel__imageWrapper">
                   <img
-                    src={get(hit, image)}
+                    src={
+                      get(hit, image)
+                        ? get(hit, image)
+                        : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK4bLUXQEreZbv1jVFF_YG_XSK_ZZsfqBQ1uIHXUpq7o3L6fmTNAsIPTqCgUcnhGuPIm0&usqp=CAU'
+                    }
                     alt={get(hit, productName)}
                     onError={(e) => (e.currentTarget.src = placeHolderError)}
                   />
