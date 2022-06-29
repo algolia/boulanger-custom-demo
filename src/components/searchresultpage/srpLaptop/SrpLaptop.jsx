@@ -151,6 +151,11 @@ const SrpLaptop = ({ setSrpIsLoaded, srpIsLoaded }) => {
             analytics={false}
             ruleContexts={userToken}
             enablePersonalization={true}
+            personalizationImpact={95}
+            enableExperimentalBlendPersonalization={true}
+            personalizationFilters={
+              userToken == "user-sylvain" ? ["brand:APPLE<score=5>"] : userToken == "user-jack" ? ["brand:Samsung<score=5>", "colour_hexa:Rose;#ff007f<score=4>"] : []
+            }
             filters={
               state?.type === 'filter' && state?.action !== null
                 ? state.action
